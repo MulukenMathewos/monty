@@ -8,6 +8,16 @@
  */
 instruction_t get_opcode(char *line)
 {
+	instruction_t opcode_list[] = {
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
+		{NULL, NULL}
+	};
 	int i;
 	char *opcode;
 	instruction_t opcode_func;
