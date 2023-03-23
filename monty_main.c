@@ -1,6 +1,7 @@
-#include "monty.h"
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
+#include "monty.h"
 
 /**
  * main - Entry point for the Monty Language Interpreter.
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 	FILE *script;
 	char *line = NULL;
 	size_t len = 0;
-	size_t nread;
+	ssize_t nread;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0;
 	instruction_t opcode_func;
