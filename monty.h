@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#define DELIMITERS " \n\t\r"
+
 /* Data structures */
 
 /**
@@ -49,5 +51,8 @@ void nop(stack_t **stack, unsigned int line_number);
 
 int is_numeric(char *str);
 void add_node(stack_t **stack, int n);
+
+int main(int argc, char **argv);
+void free_stack(stack_t *stack);
 
 #endif /* MONTY_H */
